@@ -52,11 +52,41 @@
 
 <p>The second step is the *Tokenization*, is the step of taking the already cleaned text and separating it into tokens, which are a list of words or chunks of separate words.</p>
 
+<p>This is another stage of processing and cleaning the data.</p>
+
+<p>First I separate the strings into "tokens" which are nothing more than a vector of words, this vector is used in the next class we will use, which is StopWordsRemover which in short will remove the stopwords.</p>
+
+<p>Examples of stopwords is: "to, it, a", is considered noisy data in nlp tasks.</p>
+
 <p>The third step is the *StopWordsRemover*, simple remove stop words ("a", "is"...) for each token.</p>
 
 <p>The fourth step is the *TF-IDF*, this tool computes a term (word) and document "frequencies", is a representation of text in numbers for machine learning.</p>
 
-<p>The fifth step is the *Classifier*, this step involves training the estimator, performing cross validation techniques on the training and validation data, applying tuning and generating the final model to classify the test data.</p>
+<p>Now I need to take the text and transform into in a numerical vector. In pyspark exists two tools to do that.</p>
+
+1. Word2Vec;
+2. TF-IDF / HashingTF;
+
+<p>First i will try TF-IDF, before is a good test to switch to word2vec.</p>
+
+<p>After the previous data cleaning, now is the step of applying some form of numerical representation of the textual data. The most classic and simple is the TF-IDF tool which stands for "Term Frequency" and "Inverse Document Frequency". After you compute the TF-IDF scores for each term (word) in each document (vector of clean tokens), these scores reflect the importance of each term within the respective documents and can be used for various text analysis tasks.</p>
+
+<p>The fifth step is the *Classifier*, this step involves training the estimator, performing cross validation techniques on the training and validation data, applying tuning and generating the final model to classify the test data. This is a very long step to work too, i have crated a Cross Validation K Fold manually because in pyspark do not exists a simple class to do that (only CrossValidator wich expects ParamGrid) and tuning with Hyperopt.</p>
+
+<p>Now i will try to fit a machine learning model to receive a document vector from TF-IDF withous reducing dimensionality (check next steps) and produce a proba or classification for score label.</p>
+
+<p>On my custom Cross Validation implementation in PySpark, i followed this steps to produce:</p>
+
+1. Random Sample Dataset into Train and Test;
+2. Train dataset with Train sample and valid with Test;
+3. Repeat K times;
+4. Summarize Metrics;
+
+<p>But in multiclass problems, is impossible to random split, because you can imbalance classes, I will need to random split and have same classes proportions.</p>
+<p>In first fold with default estimator i get this results:</p>
+
+![image](https://github.com/xGabrielR/Sentiment-Analysis/assets/75986085/cf90e646-ca1f-4c72-9bf4-61675388151b)
+
 
 <h2>2. Next Steps</h2>
 <hr>
