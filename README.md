@@ -38,6 +38,18 @@
 
 <p>The first step is the *Data Cleaning*, in this step I have used spark for cleaning texts with regex and built-in transformations.</p>
 
+<p>In this first step, I will "sample" the dataset, i will start balancing the classes with 7_000 rows of each class, in a total of 21000 rows. In this dataset we have a min class size of 52635, I can random select 52635 examples for each class for random undersampling technique, but for now: "very small dataset".</p>
+
+<img src="imgs/image.png">
+
+<p>After that, is the step of split the dataset into three distincts datasets on start of any data science / m.l study or real project. This datasets is used for fine tuning and test generalization of estimator.</p>
+
+1. Training - Training first spark ML estimator, and get scalers representations for future transform others datasets;
+2. Validation - Valide training performance and tuning process on this dataset;
+3. Testing - This slice of dataset is used to measure generalization in production;
+
+<img src="imgs/image-1.png">
+
 <p>The second step is the *Tokenization*, is the step of taking the already cleaned text and separating it into tokens, which are a list of words or chunks of separate words.</p>
 
 <p>The third step is the *StopWordsRemover*, simple remove stop words ("a", "is"...) for each token.</p>
