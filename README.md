@@ -46,7 +46,7 @@
 
 <p>The fifth step is the *Classifier*, this step involves training the estimator, performing cross validation techniques on the training and validation data, applying tuning and generating the final model to classify the test data.</p>
 
-<h2>3. Next Steps</h2>
+<h2>2. Next Steps</h2>
 <hr>
 
 <p>There are other next steps and much work to do, that I will take in this project in future, for example:</p>
