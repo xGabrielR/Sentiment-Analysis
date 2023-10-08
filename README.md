@@ -95,6 +95,12 @@
 
 <p>This is the all of my solution, i have post the notebook on kaggle to: https://www.kaggle.com/code/gabrielrichter/sentiment-analysis-with-pyspark</p>
 
+<p>I have used LLMs in a another more simpler pipeline too, just for test hugging face models. This pipeline is describe on 04 notebook, with this pipeline i get litle more better results than previous steps using tf-idf, is very cool use this kind of solution for sentiment analysis.</p>
+
+<img src="imgs/image-5.png">
+
+<p>Is just more simple. but have much work to do in next steps for this second solution. =D</p>
+
 <h2>2. Next Steps</h2>
 <hr>
 
@@ -105,3 +111,4 @@
 3. Apply dimensionality reducers such as SVC (sparce) to reduce dimensions (problem of high dimensions) and facilitate estimator learning.
 4. Test with more training, validation and testing data (I have make a simple top K undersampling).
 5. Productize the estimator with mlflow or another tool.
+6. Try pyspark hugging face dataset support.
