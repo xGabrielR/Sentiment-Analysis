@@ -16,8 +16,6 @@
 <h2>0. Project Objectives</h2>
 <hr>
 
-<p>In this project I focused much more on a recipe book for classic machine learning solutions for NLP tasks I followed several interesting subjects that I identified throughout my studies and to summarize all of this I developed some pipelines in pyspark and also made some comparisons with sentiment analysis with modern tools such as: Roberta, Chatgpt (GPT), LLAMA and Falcon ("Free Gpt alternative") all aimed at solving sentiment analysis.</p>
-
 <p>In this small project I aim to train my skills with Spark on multiclass classification problems.</p>
 
 <p>The project basically consists of sentiment analysis pipeline using kaggle dataset product reviews on this link: https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews.</p>
