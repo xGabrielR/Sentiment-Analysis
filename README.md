@@ -4,6 +4,9 @@
 
 <img src="assets/logo.png">
 
+Para mais detalhes em português, considere acessar a documentação em MKDOCS dentro do diretório docs!! =)
+
+
 ---
 
 ### Summary
