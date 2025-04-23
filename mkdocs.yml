@@ -1,0 +1,46 @@
+site_name: Food Reviews, PySpark Sentiment Analysis
+repo_url: https://github.com/xGabrielR/Sentiment-Analysis
+site_description: Exploring Sentiment Analysis with PySpark and Large Language Models in batch inference.
+site_author: Gabriel Richter
+use_directory_urls: false
+nav:
+  - Problema de Negócio: business.md
+  - Estratégia de Solução: strategy.md
+  - Análise Descritiva: descriptive.md
+  - Análise de Sentimentos:
+      - Soluções Clássicas: modules/base.md
+      - Large Language Models: modules/llm.md
+plugins:
+  - mkdocstrings
+  - search
+copyright:
+theme:
+  name: material
+  font:
+    text: Helvetica
+  features:
+    - navigation.tabs
+markdown_extensions:
+  - admonition
+  - pymdownx.keys
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.inlinehilite
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      use_pygments: false
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
+  - javascripts/config.js
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - javascripts/tables.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra_css:
+  - stylesheets/extra.css
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/googlecode.min.css
